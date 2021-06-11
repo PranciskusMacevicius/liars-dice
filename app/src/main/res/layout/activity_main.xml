@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/rollBtn"
+        android:id="@+id/roll_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/roll"
@@ -16,53 +16,75 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/diceImage1"
+        android:id="@+id/dice_image1"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:contentDescription="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/diceImage2"
+        app:layout_constraintEnd_toStartOf="@+id/dice_image2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_0" />
 
     <ImageView
-        android:id="@+id/diceImage2"
+        android:id="@+id/dice_image2"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:contentDescription="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/diceImage3"
-        app:layout_constraintStart_toEndOf="@+id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/dice_image3"
+        app:layout_constraintStart_toEndOf="@+id/dice_image1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_0" />
 
     <ImageView
-        android:id="@+id/diceImage3"
+        android:id="@+id/dice_image3"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:contentDescription="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/diceImage4"
-        app:layout_constraintStart_toEndOf="@+id/diceImage2"
+        app:layout_constraintEnd_toStartOf="@+id/dice_image4"
+        app:layout_constraintStart_toEndOf="@+id/dice_image2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_0" />
 
     <ImageView
-        android:id="@+id/diceImage4"
+        android:id="@+id/dice_image4"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:contentDescription="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/diceImage5"
-        app:layout_constraintStart_toEndOf="@+id/diceImage3"
+        app:layout_constraintEnd_toStartOf="@+id/dice_image5"
+        app:layout_constraintStart_toEndOf="@+id/dice_image3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_0" />
 
     <ImageView
-        android:id="@+id/diceImage5"
+        android:id="@+id/dice_image5"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:contentDescription="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/diceImage4"
+        app:layout_constraintStart_toEndOf="@id/dice_image4"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_0" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

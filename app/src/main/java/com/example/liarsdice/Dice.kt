@@ -6,4 +6,5 @@ class Dice(private val numSides: Int) {
     }
 
     var numDice = 0
+    var amountDice = 5
 }
