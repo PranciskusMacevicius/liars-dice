@@ -3,5 +3,22 @@
     <string name="roll">roll</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
-    <string name="zero">0</string>
+    <string name="game_mode">game mode</string>
+    <string name="player_1">Player 1</string>
+    <string name="one_time">1x</string>
+    <string name="bid_slot">bid slot</string>
+    <string name="players_1_dices">show player\'s 1 dices</string>
+    <string name="hide_dices">hide dices</string>
+    <string name="dices_visibility">Dices\' Visibility</string>
+    <string name="liar">liar</string>
+    <string name="roll_for_wholl_start">Roll For Who\'ll Start</string>
+    <string name="roll_mode">roll mode</string>
+    <string name="restart">restart</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="rolled_dice">rolled dice</string>
 </resources>

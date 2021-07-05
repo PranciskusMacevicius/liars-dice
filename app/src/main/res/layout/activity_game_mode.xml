@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".GameMode">
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceImage1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rolled_dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceImage2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceImage2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rolled_dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceImage3"
+        app:layout_constraintStart_toEndOf="@+id/diceImage1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceImage3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rolled_dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceImage4"
+        app:layout_constraintStart_toEndOf="@+id/diceImage2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceImage4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rolled_dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceImage5"
+        app:layout_constraintStart_toEndOf="@+id/diceImage3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceImage5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rolled_dice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diceImage4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minus"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/rollModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roll_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_1"
+        app:layout_constraintBottom_toTopOf="@+id/minusButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceBidImage11"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage12"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage10"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage7"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage3"
+        app:layout_constraintStart_toEndOf="@+id/diceBidImage1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage5"
+        app:layout_constraintStart_toEndOf="@+id/diceBidImage3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage10"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage11"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage9"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage12"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage13"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage11"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage14"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage15"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage13"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage10"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage8"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage7"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage8"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage6"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage15"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage14"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage9"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage4"
+        app:layout_constraintStart_toEndOf="@+id/diceBidImage2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage6"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidImage13"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/bid_slot"
+        app:layout_constraintBottom_toTopOf="@id/diceImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidImage14"
+        app:layout_constraintStart_toEndOf="@id/diceBidImage12"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <TextView
+        android:id="@+id/diceBidText1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/diceBidText2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText3"
+        app:layout_constraintStart_toEndOf="@+id/diceBidText1" />
+
+    <TextView
+        android:id="@+id/diceBidText3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText4"
+        app:layout_constraintStart_toEndOf="@+id/diceBidText2" />
+
+    <TextView
+        android:id="@+id/diceBidText4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText5"
+        app:layout_constraintStart_toEndOf="@+id/diceBidText3" />
+
+    <TextView
+        android:id="@+id/diceBidText5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText6"
+        app:layout_constraintStart_toEndOf="@id/diceBidText4" />
+
+    <TextView
+        android:id="@+id/diceBidText6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText7"
+        app:layout_constraintStart_toEndOf="@id/diceBidText5" />
+
+    <TextView
+        android:id="@+id/diceBidText7"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText8"
+        app:layout_constraintStart_toEndOf="@id/diceBidText6" />
+
+    <TextView
+        android:id="@+id/diceBidText8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText9"
+        app:layout_constraintStart_toEndOf="@id/diceBidText7" />
+
+    <TextView
+        android:id="@+id/diceBidText9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText10"
+        app:layout_constraintStart_toEndOf="@id/diceBidText8" />
+
+    <TextView
+        android:id="@+id/diceBidText10"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText11"
+        app:layout_constraintStart_toEndOf="@id/diceBidText9" />
+
+    <TextView
+        android:id="@+id/diceBidText11"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText12"
+        app:layout_constraintStart_toEndOf="@id/diceBidText10" />
+
+    <TextView
+        android:id="@+id/diceBidText12"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText13"
+        app:layout_constraintStart_toEndOf="@id/diceBidText11" />
+
+    <TextView
+        android:id="@+id/diceBidText13"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText14"
+        app:layout_constraintStart_toEndOf="@id/diceBidText12" />
+
+    <TextView
+        android:id="@+id/diceBidText14"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidText15"
+        app:layout_constraintStart_toEndOf="@id/diceBidText13" />
+
+    <TextView
+        android:id="@+id/diceBidText15"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/diceBidImage1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diceBidText14" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelectText2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelectText3"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelectText1" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelectText4"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelectText2" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelectText5"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelectText3" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelectText6"
+        app:layout_constraintStart_toEndOf="@id/diceBidSelectText4" />
+
+    <TextView
+        android:id="@+id/diceBidSelectText6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/one_time"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/diceBidSelect1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diceBidSelectText5" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/one"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelect2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice_1"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/two"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelect3"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelect1"
+        app:srcCompat="@drawable/dice_2"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/three"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelect4"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelect2"
+        app:srcCompat="@drawable/dice_3"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/four"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelect5"
+        app:layout_constraintStart_toEndOf="@+id/diceBidSelect3"
+        app:srcCompat="@drawable/dice_4"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/five"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toStartOf="@+id/diceBidSelect6"
+        app:layout_constraintStart_toEndOf="@id/diceBidSelect4"
+        app:srcCompat="@drawable/dice_5"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/diceBidSelect6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/six"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/playerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diceBidSelect5"
+        app:srcCompat="@drawable/dice_6"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/playersDices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/players_1_dices"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceImage5" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dicesVisibilitySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/dices_visibility"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playersDices" />
+
+    <Button
+        android:id="@+id/liarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/liar"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceImage1" />
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:text="@string/roll_for_wholl_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceImage3" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
